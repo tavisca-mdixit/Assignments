@@ -53,8 +53,8 @@ namespace ConsoleApplication10
         }
 
 
-        [SampleAttributes()]
-        public void calUSD()
+        [SampleAttributes]
+          public void calUSD()
         {
           usd=  inr * 60 ;
         }

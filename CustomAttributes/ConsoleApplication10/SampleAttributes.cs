@@ -15,22 +15,28 @@ namespace ConsoleApplication10
     class SampleAttributes:Attribute
     {
 
-        String time;
+        static string time;
+        
                          
         public SampleAttributes()
         {
             
-            this.time = DateTime.UtcNow.ToString("hh:mm:ss.fff", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+            time = DateTime.UtcNow.ToString("hh:mm:ss.fff", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+            //Console.WriteLine("TIME :{0}", DateTime.UtcNow.ToString("hh:mm:ss.fff", System.Globalization.DateTimeFormatInfo.InvariantInfo));
+       
+               
         }
     
-        public void setTime(string time)
-        {
-            this.time=time;
+        public void setTime(string t)
+        { 
+            time=t;
         }
        
         public string getTime()
         {
             return time;
         }
+       
+        
     }
 }
